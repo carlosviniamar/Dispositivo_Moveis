@@ -13,17 +13,24 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //
-      appBar: AppBar(title: 'App ADS'),
-      child: Container(
-        child: Center(
-            child: GestureDetector(s
-                child: Text('Click $counter'),
-                onTap: () {
-                  setState(() {
-                    counter++;
-                    print(counter);
-                  });
-                })),
+      appBar: AppBar(title: Text('App Flutter ADS')),
+      body: Center(
+          child: GestureDetector(
+              child: Text('Click $counter', style: TextStyle(fontSize: 100)),
+              onTap: () {
+                setState(() {
+                  counter--;
+                  //print(counter);
+                });
+              })),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add_circle),
+        onPressed: () {
+          setState(() {
+            counter--;
+            //print(counter);
+          });
+        },
       ),
     );
   }
