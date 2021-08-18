@@ -9,24 +9,18 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
+  bool isDark = false;
   @override
   Widget build(BuildContext context) {
-    var container = Container(
-        height: 150,
-        width: 150,
-        color: Colors.red,
-        child: Center(
-          child: Container(
-            height: 50,
-            width: 50,
-            color: Colors.green,
-            child: Icon(Icons.remove),
-          ),
-        ));
     return Scaffold(
       //
       appBar: AppBar(title: Text('App Flutter ADS')),
-      body: container,
+      body: Center(
+          child: Switch(
+              value: isDark,
+              onChanged: (value) {
+                print(value);
+              })),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
         onPressed: () {
