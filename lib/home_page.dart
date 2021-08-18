@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'app_controller.dart';
+
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() {
@@ -17,11 +19,10 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(title: Text('App Flutter ADS')),
       body: Center(
           child: Switch(
-              value: isDark,
+              value: AppController.instance.isDark,
               onChanged: (value) {
-                setState(() {
-                  isDark = value; //intercambiar o botão e fixar qnd trocar
-                });
+                AppController.instance
+                    .ChangeTheme(); //intercambiar o botão e fixar qnd trocar
               })),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
