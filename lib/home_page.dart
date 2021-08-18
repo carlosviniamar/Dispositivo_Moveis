@@ -21,6 +21,7 @@ class HomePageState extends State<HomePage> {
         width: double.infinity,
         height: double.infinity,
         child: ListView(
+          scrollDirection: Axis.vertical, //rolagem vertical ou horizontal
           children: [
             Center(child: CustomSwitch()),
             Container(
