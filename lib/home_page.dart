@@ -24,6 +24,29 @@ class HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(child: CustomSwitch()),
+            Container(
+              height: 50, //espaçamento entre o botão e o container
+            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.black,
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.green,
+                  )
+                ]),
           ],
         ),
       ),
