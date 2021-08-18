@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ola/home_page.dart';
 
+import 'app_controller.dart';
+
 class AppWidget extends StatelessWidget {
   // 1 digitar stl, estático, carregou uma vez permanece imutável
   final String title; //2  adicionar titulo
@@ -10,9 +12,15 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.green, brightness: Brightness.dark),
-      home: HomePage(),
+    return AnimatedBuilder(
+      animation: AppController.instance,
+      builder: (BuildContext context, child) {
+        return MaterialApp(
+          theme: ThemeData(
+              primaryColor: Colors.green, brightness: Brightness.dark),
+          home: HomePage(),
+        );
+      },
     );
   }
 }
