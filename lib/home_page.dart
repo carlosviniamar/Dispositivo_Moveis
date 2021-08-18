@@ -16,7 +16,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //
-      appBar: AppBar(title: Text('App Flutter ADS')),
+      appBar: AppBar(title: Text('App Flutter ADS'), actions: [CustomSwitch()]),
       body: Center(child: CustomSwitch()),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
@@ -31,7 +31,7 @@ class HomePageState extends State<HomePage> {
   }
 }
 
-class CustomSwitch extends StatefulWidget {
+class CustomSwitch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Switch(
