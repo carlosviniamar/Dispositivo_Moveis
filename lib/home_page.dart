@@ -21,56 +21,11 @@ class HomePageState extends State<HomePage> {
         width: double.infinity,
         height: double.infinity,
         child: ListView(
-          scrollDirection: Axis.vertical, //rolagem vertical ou horizontal
+          //scrollDirection: Axis.vertical, //rolagem vertical ou horizontal
           children: [
             Center(child: CustomSwitch()),
             Container(
               height: 150, //espaçamento entre o botão e o container
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.green,
             ),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
