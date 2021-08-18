@@ -23,6 +23,8 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.network(
+                'https://cdn.icon-icons.com/icons2/935/PNG/512/login-square-arrow-button-outline_icon-icons.com_73220.png'),
             TextField(
               onChanged: (text) => email = text,
               keyboardType: TextInputType.emailAddress,
@@ -49,9 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   if (email == 'carlos@gmail.com' && senha == '123') {
                     print('Login Correto');
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomePage()),
-                    );
+                    Navigator.of(context).pushReplacementNamed('/home');
                   } else {
                     print('login Incorreto');
                   }
