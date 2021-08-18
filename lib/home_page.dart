@@ -17,7 +17,15 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       //
       appBar: AppBar(title: Text('App Flutter ADS'), actions: [CustomSwitch()]),
-      body: Center(child: CustomSwitch()),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          children: [
+            Center(child: CustomSwitch()),
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add_circle),
         onPressed: () {
